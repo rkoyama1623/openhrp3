@@ -6,6 +6,8 @@ ProjectGenerator [input files] [options]
 
 input files shold be VRML or COLLADA files.
 
+you can set position and qauternion after input file.
+
 #### option
 
 * ``--output [output file]``  
@@ -41,6 +43,10 @@ input files shold be VRML or COLLADA files.
 
 ```bash
 openhrp-project-generator `rospack find openhrp3`/share/OpenHRP-3.1/sample/model/sample1.wrl `rospack find openhrp3`/share/OpenHRP-3.1/sample/model/longfloor.wrl --use-highgain-mode false --output /tmp/SampleRobot_for_torquecontrol.xml --timeStep 0.001 --dt 0.002
+```
+
+```bash
+openhrp-project-generator `rospack find openhrp3`/share/OpenHRP-3.1/sample/model/sample1.wrl `rospack find openhrp3`/share/OpenHRP-3.1/sample/model/longfloor.wrl `rospack find openhrp3`/share/OpenHRP-3.1/sample/model/box.wrl, 0.3, 0, 0.1,1, 0, 0, 0 --output /tmp/SampleRobot_for_20cmStep.xml --dt 0.002
 ```
 
 ## NOTE
